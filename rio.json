@@ -1,0 +1,20 @@
+{
+    "homepage": "https://github.com/rancher/rio",
+    "version": "0.7.1",
+    "license": "Apache-2.0",
+    "url": "https://github.com/rancher/rio/releases/download/v0.7.1/rio-windows-amd64",
+    "hash": "f558f2ef282bbe8840750ea25d40b071f39d8b3014dfa21ebf2c1fd71e615bf3",
+    "bin": [
+        [
+            "rio-windows-amd64.exe",
+            "rio"
+        ]
+    ],
+    "pre_install": "mv $dir/rio-windows-amd64 $dir/rio-windows-amd64.exe",
+    "checkver": {
+        "github": "https://github.com/rancher/rio"
+    },
+    "autoupdate": {
+        "url": "https://github.com/rancher/rio/releases/download/v$version/rio-windows-amd64"
+    }
+}
