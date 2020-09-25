@@ -17,7 +17,7 @@ function New-TemporaryDirectory {
 
 # $dir = Get-Item $PSScriptRoot
 $dir = New-TemporaryDirectory
-$name = "liifi-k3s"
+$name = "wahmed-k3s"
 
 Set-Content $dir/Dockerfile $dockerfileContent
 
