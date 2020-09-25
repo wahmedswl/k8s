@@ -68,13 +68,13 @@ Remove-Item -Recurse -Force $dir
 Write-Host "Done. Follow these steps." -ForegroundColor Yellow
 Write-Host @'
 # Start k3s (use k3s server --no-deploy traefik if installing rio"):
-wsl -d liifi-k3s;
+wsl -d wahmed-k3s;
 k3s server > /dev/null 2>&1 &
 exit;
 
 # To connect from windows use:
-$env:KUBECONFIG='//wsl$/liifi-k3s/etc/rancher/k3s/k3s.yaml'
+$env:KUBECONFIG='//wsl$/wahmed-k3s/etc/rancher/k3s/k3s.yaml'
 
 # Modify '127.0.0.1' to be 'localhost'
-sc //wsl$/liifi-k3s/etc/rancher/k3s/k3s.yaml ((gc -raw //wsl$/liifi-k3s/etc/rancher/k3s/k3s.yaml) -replace '127.0.0.1','localhost')
+sc //wsl$/wahmed-k3s/etc/rancher/k3s/k3s.yaml ((gc -raw //wsl$/wahmed-k3s/etc/rancher/k3s/k3s.yaml) -replace '127.0.0.1','localhost')
 '@
